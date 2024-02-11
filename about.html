@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rw3LkoJiw5P+K9Gyzdp9deV7NQ8o0lUbz/WWCUnMNCVmeXqVWiFqNEnRfuPckcCc" crossorigin="anonymous">
+  <title>Valentine's Respond</title>
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    #thank-you {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .valentine-box {
+      padding: 20px;
+      margin: 20px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      background-color: #f8d7da;
+      color: #721c24;
+      font-size: 18px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <div id="thank-you" class="mb-5">Thank you !!!</div>
+    <div class="valentine-box">
+      <p id="line1"></p>
+      <p id="line2"></p>
+      <p id="line3"></p>
+      <p id="line4"></p>
+    </div>
+  </div>
+
+  <script>
+    const lines = [
+      "Hey Mimi! Thank you for accepting me to become your valentine's date.",
+      "I really hope you will be happy with my little side project that I've done here.",
+      "I wish you were here to celebrate with me, but anyway, I am happy.",
+      "And always be your valentine's date :D"
+    ];
+
+    let currentLine = 0;
+
+    function showNextLine() {
+      if (currentLine < lines.length) {
+        document.getElementById(`line${currentLine + 1}`).innerText = lines[currentLine];
+        currentLine++;
+        setTimeout(showNextLine, 1000); // Adjust the delay (in milliseconds) between lines
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", showNextLine);
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofDAaT8pbcE9z9vxlJ8TO5nY6jO5uINzfs"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>

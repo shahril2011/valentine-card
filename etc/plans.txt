@@ -1,0 +1,8 @@
+idea for valentine page (lets try using react maybe) - date 11/2/2024
+
+1. index (ask if want to become the valentine) - if yes, proceed to next phase, if no, then keep persuing
+2. next phase (idea) 
+a) do you remember our date? (make a form. but im not sure if the github page able to accept form tho)
+b) if/else questions (need to think more about this one) - maybe some kind of a game
+3) give valentine's card / love letter
+4) rate this valentine page and post it on IG
